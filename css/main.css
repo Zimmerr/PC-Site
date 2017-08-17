@@ -1,0 +1,294 @@
+/* custom font*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+.logo{
+	width: 80px;
+	height: 60px;
+	display: block;
+	margin: auto;
+	margin-top: 2%;
+    
+	
+}
+
+.inicio{
+	
+}
+
+html {
+	height: 100%;
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+}
+
+body {
+	font-family: "Open Sans", arial, verdade;
+	background-color: transparent;
+}
+.navbar{
+	background-color: rgba(129, 132, 232, 0.7);
+	border-color: transparent;
+}
+.navbar-default .navbar-nav>li>a {
+	color: #222;
+	font-family: "Open Sans";
+	font-size: 2rem;
+	font-weight: bold;
+}
+.jumbotron{
+	background-color: rgba(0,0,0,0.2);
+}
+.como-funciona {
+	padding: 2rem;
+	background: #fff;
+}
+.quem-somos{
+	height: 450px;
+	background: rgb(111, 232, 177);
+}
+.info-quem-somos{
+	padding: 3rem;
+}
+.img-quem-somos{
+	height:450px;
+	background-color: #666;
+}
+footer{
+	background: #fff;
+	height: 300px;
+}
+/*estilo do form*/
+#msform {
+	width: 95%;
+	margin: 10px auto;
+	text-align: center;
+	position: relative;
+
+}
+ fieldset{
+	background-color: #fff;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 0px 30px ;
+
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10% 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+
+	/*para empilhar os fieldsets*/
+	position: absolute;
+
+
+
+	width: 50%;
+	margin: 50px auto;
+	text-align: center;
+	position: relative;
+	
+}
+/*para ocultar os fieldsets e mostrar o primeiro*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+
+.form-group{
+	margin-bottom: 0px;
+	margin-top: 0px;
+	width: 100%;
+	text-align: center
+}
+/*inputs*/
+#msform .input {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: "Open Sans";
+	color: #2C3E50;
+	font-size: 13px;
+}
+
+.msm-linha {
+	display: inline-block;
+	max-width: 49.5%;
+}
+.cadastro-rapido {
+	text-align: left;
+	display: inline-block;
+	max-width: 20px;
+}
+
+span .clear{
+	clear:left;
+	display: block;
+}
+
+/*botões*/
+#msform .action-button{
+	min-width: 100px;
+	background-color: #79b8e5;
+	font-weight: bold;
+	color: #fff;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+	box-sizing: border-box;
+
+}
+#msform .action-button:hover,
+#msform .action-button:focus {
+	box-shadow: 0 0 0 2px #fff, 0 0 0 3px #79b8e5;
+}
+#btn-salvar {
+	display: none;
+}
+#msform .action-button:disabled{
+	background-color: red;
+}
+/*cabeçalhos*/
+.fs-titulo {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.fs-subtitulo, label {
+	font-weight: normal;
+	font-size: 14px;
+	color: #666;
+	margin: 0 0 5px 0;
+
+}
+
+/*barra de progresso*/
+#progressbar {
+	margin-bottom: px;
+	overflow: hidden;
+	/*CSS contador dos passos*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 25%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background-color: #fff;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*conector barra de progresso*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*coloca atrás dos números*/
+}
+#progressbar li:first-child:after {
+	/*não precisa de conector antes do numero 1*/
+	content: none;
+}
+/*marcação ativa/passo completo*/
+#progressbar li.active:before, #progressbar li.active:after {
+	background-color: #27AE60;
+	color: #fff;
+}
+
+
+@media screen and (min-width:300px) and (max-width: 800px){
+	#msform{
+		width: 95%;
+
+	}
+	 fieldset{
+		width: 100%;
+		margin: 0;
+		padding: 0px;
+	}
+}

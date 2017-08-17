@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  
+  <title>PassaCheque</title>
+</head>
+<body>
+  <header>
+		<nav class="navbar navbar-default ">
+			<div class="container-fluid">
+				 <!-- toggle menu burger -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barranav" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<!-- <span class="icon-bar"></span> -->
+					</button>
+					<a class="navbar-brand" href="#">
+						<img src="img/logo_p.png" alt="" />
+					</a>
+				</div>
+			 <!-- itens da barra de nav para o toggle  -->
+				<div class="collapse navbar-collapse" id="barranav">
+					<!--<button type="button" class="btn btn-default navbar-btn navbar-right" data-toggle="modal" data-target="#myModal">Entre</button>-->
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/">Home</a></li>
+						<li><a href="#">Como funciona</a></li>
+						<li><a href="#">Quem Somos</a></li>
+						<li><a href="#">Parceiros</a></li>
+						<li><a href="#footer">Contato</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+	</header>
+
+
+	<!--<div class="container-fluid inicio">
+    	<a class="" href="#">
+            <img class="logo" src="img/logo_p.png" alt="" />
+         </a>
+  	</div>-->
+
+  	<div class="container-fluid" role="main">
+  		
+  			<fieldset>
+  				<form id="msform">
+  				<h2 class="fs-titulo">Crie sua conta</h2>
+
+				<input type="text" id="CNPJ" name="CNPJ" placeholder="CNPJ" required="required" class = "input"/>
+				<label class="switch"><input type="checkbox" name="sem-cpf"><span class="slider"></span></label> <label> Não possuo CNPJ</label>
+				
+
+				<input type="text" id="nome" name="nome-emp" placeholder="Nome da Empresa" required="required" maxlength="30" class = "input"/>
+				<input type="email" id="email" name="email-emp" placeholder="Email da Empresa" required="required" maxlength="30" class = "input" />
+				<label class="switch"><input type="checkbox" name ="msmo-email"><span class="slider"></span></label> <label> O mesmo do cadastro pessoal</label>
+				
+				<input type="text" id="tel" name="tel-cel" placeholder="Telefone" required="required"class = "input" />
+				<label class="switch"><input type="checkbox" name ="msmo-tel"><span class="slider"></span></label> <label> O mesmo do cadastro pessoal</label>
+				<br>
+				<input type="button" name="next" class="send action-button" id="btn-enviar" value="Enviar" />
+				
+				<hr>
+				</form>
+				<form id="msform">
+				<div class = "form-group"> <span>Informe o Código Enviado por Email</span>
+				<input type="text" id="codigo" name="codigo" placeholder="Código" class = "input" disabled/></div>
+
+				<div class = "form-group" style="float: left;"">
+				<input type="button"  name="next" style="float: left" class="action-button" " id="btn-enviar" value="Reenviar Código" />
+				
+				</div>
+
+				<div class = "form-group">
+				<input type="checkbox" name ="cad-rapido" style="float:left;"><label style="float:left; margin-left: 4px;">Cadastro Rápido?</label>
+				<input style="float: right;" type="button" name="next" class="action-button" style="" id="btn-enviar" value="Confirmar" />
+				</div>
+
+				</form>
+			</fieldset>
+			
+
+  		</form>
+  	</div>
+
+  
+  <script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+  <script src="js/jquery.mask.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+  
+</body>
+</html>
