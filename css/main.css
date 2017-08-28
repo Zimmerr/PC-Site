@@ -89,7 +89,7 @@ body {
 	background-color: transparent;
 }
 .navbar{
-	background-color: rgba(129, 132, 232, 0.7);
+	background-color: rgba(129, 132, 232, 0.9);
 	border-color: transparent;
 }
 .navbar-default .navbar-nav>li>a {
@@ -123,35 +123,43 @@ footer{
 /*estilo do form*/
 #msform {
 	width: 95%;
-	margin: 10px auto;
+	/*margin: 10px auto;*/
 	text-align: center;
 	position: relative;
 
-}
- fieldset{
 	background-color: #fff;
 	border: 0 none;
 	border-radius: 3px;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-	padding: 0px 30px ;
+	padding: 30px 30px ;
 
 	box-sizing: border-box;
-	width: 80%;
-	margin: 0 10% 10px;
+
 	margin-left: 0px;
 	margin-right: 0px;
 
-	/*para empilhar os fieldsets*/
-	position: absolute;
-
-
-
-	width: 50%;
-	margin: 50px auto;
+	width: 40%;
+	
 	text-align: center;
 	position: relative;
-	
 }
+
+.flexx{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ .form-left{
+ 	float: left;
+ }
+
+ .form-right{
+ 	margin-top: auto;
+ 	margin-bottom: auto;
+ 	float: right;
+ 	height: 50%;
+ }
 /*para ocultar os fieldsets e mostrar o primeiro*/
 #msform fieldset:not(:first-of-type) {
 	display: none;
@@ -205,15 +213,19 @@ span .clear{
 	box-sizing: border-box;
 
 }
-#msform .action-button:hover,
-#msform .action-button:focus {
+#msform .action-button:hover:enabled,
+#msform .action-button:focus:enabled {
 	box-shadow: 0 0 0 2px #fff, 0 0 0 3px #79b8e5;
 }
 #btn-salvar {
 	display: none;
 }
 #msform .action-button:disabled{
-	background-color: red;
+	background-color: lightgray;
+}
+
+#msform .action-button:disabled:hover{
+	box-shadow: 0;
 }
 /*cabeçalhos*/
 .fs-titulo {
@@ -231,64 +243,44 @@ span .clear{
 
 }
 
-/*barra de progresso*/
-#progressbar {
-	margin-bottom: px;
-	overflow: hidden;
-	/*CSS contador dos passos*/
-	counter-reset: step;
-}
-#progressbar li {
-	list-style-type: none;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 9px;
-	width: 25%;
-	float: left;
-	position: relative;
-}
-#progressbar li:before {
-	content: counter(step);
-	counter-increment: step;
-	width: 20px;
-	line-height: 20px;
-	display: block;
-	font-size: 10px;
-	color: #333;
-	background-color: #fff;
-	border-radius: 3px;
-	margin: 0 auto 5px auto;
-}
-/*conector barra de progresso*/
-#progressbar li:after {
-	content: '';
-	width: 100%;
-	height: 2px;
-	background-color: #fff;
-	position: absolute;
-	left: -50%;
-	top: 9px;
-	z-index: -1; /*coloca atrás dos números*/
-}
-#progressbar li:first-child:after {
-	/*não precisa de conector antes do numero 1*/
-	content: none;
-}
-/*marcação ativa/passo completo*/
-#progressbar li.active:before, #progressbar li.active:after {
-	background-color: #27AE60;
-	color: #fff;
-}
 
+
+
+hr{display: none}
+
+.label-slider{
+	position: relative; top: -8px;	
+}
 
 @media screen and (min-width:300px) and (max-width: 800px){
 	#msform{
-		width: 95%;
-
-	}
-	 fieldset{
 		width: 100%;
 		margin: 0;
-		padding: 0px;
+		margin-top: -15px;
+		border-radius: 0px;
+		box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0.4);
+		text-align: left;
+		padding: 10px;
+		background-color: transparent;
+
+		
+	}
+	
+
+	hr{display: block;}
+
+	html{
+		background-image: none;
+		background-color: #eee;
+		
+	}
+
+	.flexx{
+		display: initial
+	}
+
+	.form-left .form-right{
+		float: none;
+		
 	}
 }

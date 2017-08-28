@@ -47,46 +47,51 @@
          </a>
   	</div>-->
 
-  	<div class="container-fluid" role="main">
+  	<div class="container-fluid flexx" role="main">
   		
-  			<fieldset>
-  				<form id="msform">
+  				
+  				<form id="msform" class="formd-left">
   				<h2 class="fs-titulo">Crie sua conta</h2>
 
 				<input type="text" id="CNPJ" name="CNPJ" placeholder="CNPJ" required="required" class = "input"/>
-				<label class="switch"><input type="checkbox" name="sem-cpf"><span class="slider"></span></label> <label> Não possuo CNPJ</label>
+				<label class="switch"><input type="checkbox" name="sem-cpf"><span class="slider"></span></label> <label class="label-slider"> Não possuo CNPJ</label>
 				
 
 				<input type="text" id="nome" name="nome-emp" placeholder="Nome da Empresa" required="required" maxlength="30" class = "input"/>
 				<input type="email" id="email" name="email-emp" placeholder="Email da Empresa" required="required" maxlength="30" class = "input" />
-				<label class="switch"><input type="checkbox" name ="msmo-email"><span class="slider"></span></label> <label> O mesmo do cadastro pessoal</label>
+				<label class="switch"><input type="checkbox" name ="msmo-email"><span class="slider"></span></label> <label class="label-slider"> O mesmo do cadastro pessoal</label>
 				
 				<input type="text" id="tel" name="tel-cel" placeholder="Telefone" required="required"class = "input" />
-				<label class="switch"><input type="checkbox" name ="msmo-tel"><span class="slider"></span></label> <label> O mesmo do cadastro pessoal</label>
+				<label class="switch"><input type="checkbox" name ="msmo-tel"><span class="slider"></span></label> <label class="label-slider"> O mesmo do cadastro pessoal</label>
 				<br>
 				<input type="button" name="next" class="send action-button" id="btn-enviar" value="Enviar" />
 				
 				<hr>
 				</form>
-				<form id="msform">
+				
+
+				
+				<form id="msform" class="form-right confirmForm" disabled>
 				<div class = "form-group"> <span>Informe o Código Enviado por Email</span>
-				<input type="text" id="codigo" name="codigo" placeholder="Código" class = "input" disabled/></div>
+				<input type="text" id="codigo" name="codigo" placeholder="Código" class = "input" /></div>
+
+
 
 				<div class = "form-group" style="float: left;"">
 				<input type="button"  name="next" style="float: left" class="action-button" " id="btn-enviar" value="Reenviar Código" />
 				
-				</div>
-
-				<div class = "form-group">
-				<input type="checkbox" name ="cad-rapido" style="float:left;"><label style="float:left; margin-left: 4px;">Cadastro Rápido?</label>
+				
+				
 				<input style="float: right;" type="button" name="next" class="action-button" style="" id="btn-enviar" value="Confirmar" />
 				</div>
+				<input type="checkbox" name ="cad-rapido" style="float:left;"><label style="float:left; margin-left: 4px;">Cadastro Rápido?</label>
 
 				</form>
-			</fieldset>
+				
+				
 			
 
-  		</form>
+  		
   	</div>
 
   
